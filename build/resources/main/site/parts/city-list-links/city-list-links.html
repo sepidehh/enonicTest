@@ -1,0 +1,10 @@
+<div class="cities" style="min-height:100px;">
+    <h3>city menu</h3>
+	<ul>
+        <li data-th-each="city : ${cities}">
+            <strong>
+                <a data-th-href="${city.contentUrl}" data-th-text="${city.name} + '  (' + ${city.country} + ')'"></a>
+            </strong>
+        </li>
+    </ul>
+</div>

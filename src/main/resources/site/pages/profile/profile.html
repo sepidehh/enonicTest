@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Task</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+	<link data-th-href="${portal.assetUrl({'_path=/css/style.css'})}" href="../assets/css/style.css" rel="stylesheet"/>
+</head>
+<body data-portal-component-type="page" class="container">
+	<div data-portal-region="top">
+		<div data-th-if="${topRegion}" data-th-each="component : ${topRegion.components}" data-th-remove="tag">
+            <div data-portal-component="${component.path}" data-th-remove="tag"></div>
+        </div>
+	</div>
+	<div data-portal-region="body">
+		<div data-th-if="${bodyRegion}" data-th-each="component : ${bodyRegion.components}" data-th-remove="tag">
+			<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+		</div>
+	</div>
+	<div data-portal-region="right">
+		<div data-th-if="${rightRegion}" data-th-each="component : ${rightRegion.components}" data-th-remove="tag">
+			<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+		</div>
+	</div>
+</body>
+</html>

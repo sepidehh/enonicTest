@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test tasks</title>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <link data-th-href="${portal.assetUrl({'_path=css/hello.css'})}" href="../assets/css/hello.css" rel="stylesheet"/>
+    <link data-th-href="${portal.assetUrl({'_path=js/jquery-jvectormap-2.0.3.css'})}" href="../assets/js/jquery-jvectormap-2.0.3.css"/>
+    <script type="text/javascript" data-th-src="${portal.assetUrl({'_path=js/jquery-jvectormap-2.0.3.min.js'})}" src="../assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+    <script type="text/javascript" data-th-src="${portal.assetUrl({'_path=js/jquery-jvectormap-world-mill-en.js'})}" src="../assets/js/jquery-jvectormap-world-mill-en.js"></script>
+</head>
+<body data-portal-component-type="page">
+    <h1>Web Developer Test</h1>
+    <h2>Countries</h2>
+	<ul>
+        <li data-th-each="country : ${countries}">
+            <strong>
+                <a data-th-href="${country.contentUrl}" data-th-text="${country.name}"></a>
+            </strong>
+        </li>
+    </ul>
+	<div data-portal-region="Part1">
+		<div data-th-if="${regionPart1}" data-th-each="component : ${regionPart1.components}" data-th-remove="tag">
+            <div data-portal-component="${component.path}" data-th-remove="tag"></div>
+        </div>
+	</div>
+	 <div data-portal-region="Part2">
+     </div>
+
+    <div id="world-map">World map</div>
+
+<script th:inline="javascript">
+
+        $(function(){
+            /*<![CDATA[*/
+
+            var codeValues= /*[[${codeValues}]]*/ [];
+
+            /*]]>*/
+            var map = $('#world-map').vectorMap({
+                map: 'world_mill_en',
+                series: {
+                    regions: [{
+                        attribute: 'fill',
+                        values: codeValues
+                    }]
+                }
+            });
+
+        });
+
+</script>
+</body>
+</html>

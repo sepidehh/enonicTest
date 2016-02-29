@@ -1,0 +1,40 @@
+<div class="main">
+    <div class="col-md-3 hidden-xs left">
+        <div class="row contact"> <span id="contact"> Contact</span><br/>
+            +47 98236011
+        </div>
+        <div class="row skills"><span id="skills">Skills</span></div>
+    </div>
+    <div class="col-md-6 col-xs-12 center">
+        <div class="status">
+            <div class="row">
+                <textarea class="form-control" rows="3" placeholder="What's on your mind?"></textarea>
+            </div>
+            <div class="row">
+                <input class="btn btn-default" type="submit" value="Submit"/>
+                <input class="btn btn-default" type="button" value="Add image"/>
+            </div>
+        </div>
+        <div class="row post">
+            <div class="row info-post">
+                <div class="col-md-2 col-xs-2 avatar" >
+                    <img data-th-src="${portal.assetUrl({'_path=images/profile.jpg'})}" class="img-responsive img-circle" alt="Responsive image"/>
+                </div>
+                <div class="col-md-8 col-xs-8 name-post" >
+                    <span class="id">Thomas Testing</span><br/>
+                    <span class="activity-time">a few seconds ago</span>
+                </div>
+                <div class="col-md-2 col-xs-2 close">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="row status-post">
+                <p>This is the new status updated of Les Miserables</p>
+                <img data-th-src="${portal.assetUrl({'_path=images/post.jpg'})}" class="img-responsive center-block" alt="Responsive image"/>
+            </div>
+            <div class="row like">
+                <span>like(3)</span>
+            </div>
+        </div>
+    </div>
+</div>

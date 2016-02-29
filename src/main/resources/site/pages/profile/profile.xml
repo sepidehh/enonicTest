@@ -1,0 +1,9 @@
+<page>
+    <display-name>Profile Page</display-name>
+    <config/>
+    <regions>
+        <region name="top"/>
+        <region name="body"/>
+        <region name="right"/>
+    </regions>
+</page>

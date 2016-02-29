@@ -1,0 +1,99 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+.row .navbar {
+  height: 40px;
+  background-color: #2F2F2F;
+  margin: 0; }
+  .row .navbar .container .navbar-right li a .form-control {
+    margin-top: -4%; }
+
+.cover .cover-photo {
+  margin-top: -10%; }
+  .cover .cover-photo img {
+    height: 400px;
+    width: 100%;
+    display: block;
+    margin-top: 0;
+    padding-top: 0; }
+.cover .profile-picture img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: -60%;
+  margin-left: 8%;
+  border: solid 5px #E6F4FE; }
+.cover .info .id {
+  margin-top: -20%;
+  margin-left: -6%;
+  color: #CCCCCC; }
+
+.main {
+  margin-top: 5%; }
+  .main .left {
+    padding-left: 7%; }
+    .main .left span {
+      font-weight: bold;
+      font-size: 18px; }
+    .main .left .skills {
+      margin-top: 4%; }
+  .main .center .status {
+    width: 90%;
+    height: 90%;
+    border: solid 2px #CCCCCC;
+    border-radius: 5px; }
+    .main .center .status textarea {
+      width: 80%;
+      height: 100%;
+      margin: 5% 10%; }
+    .main .center .status .btn-default {
+      display: inline;
+      float: right;
+      margin-right: 5%;
+      margin-bottom: 3%;
+      background-color: #d9dddd;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#d9dddd), to(#c6c3c3)); }
+  .main .center .post {
+    background-color: #E6F4FE;
+    border-radius: 5px;
+    margin-top: 5%;
+    margin-left: 0.5%;
+    width: 91%;
+    height: auto; }
+    .main .center .post .name-post {
+      margin-left: -3%;
+      margin-top: 1%;
+      font-size: 15px; }
+      .main .center .post .name-post .id {
+        font-weight: bold; }
+    .main .center .post .close {
+      padding-left: 8%;
+      padding-top: 2%; }
+    .main .center .post .status-post p {
+      font-size: 17px;
+      float: left;
+      padding: 5%; }
+    .main .center .post .status-post img {
+      padding: 0 8%;
+      border-radius: 5px; }
+    .main .center .post .like {
+      margin: 10%;
+      padding-bottom: 5%; }
+      .main .center .post .like span {
+        color: #337ABF; }
+
+.right {
+  margin-bottom: 3%; }
+  .right #people {
+    background-color: #26759e;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3175B0), to(#2B679B));
+    color: #FFFFFF;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    padding: 5%; }
+  .right #name2 {
+    border: solid 2px #CCCCCC;
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    padding: 5%; }
+
+/*# sourceMappingURL=style.css.map */

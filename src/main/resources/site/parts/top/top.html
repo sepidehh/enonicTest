@@ -1,0 +1,38 @@
+<div class="row navi">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Social Internet</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav li-style">
+                    <li ><a href="#">Department</a></li>
+                    <li ><a href="#">Grid</a></li>
+                    <li ><a href="#">Theme</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">
+                        <input class="form-control" id="ex1" type="text" placeholder="Search..."/></a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-at"></i>SU </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="row cover">
+    <div class="cover-photo">
+        <img data-th-src="${portal.assetUrl({'_path=images/header.jpg'})}"/>
+    </div>
+    <div class="profile-picture  col-md-4 col-xs-4">
+        <img class="img-circle img-responsive" data-th-src="${portal.assetUrl({'_path=images/profile.jpg'})}"/>
+    </div>
+    <div class="info col-md-8 col-xs-8">
+        <h2 class="id">Thomas Testing <br/> CTO</h2>
+    </div>
+</div>
