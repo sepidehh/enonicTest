@@ -14,7 +14,7 @@ exports.get = function(req) {
     // Prepare the model that will be passed to the view
     var model = {
         mainRegion: mainRegion
-    }
+    };
 
     // Specify the view file to use
     var view = resolve('hello-region.html');

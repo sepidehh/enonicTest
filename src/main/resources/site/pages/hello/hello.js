@@ -26,25 +26,22 @@ exports.get = function(req) {
 
         var country = {};
         country.name = hits[i].displayName;
-        codeValues[hits[i].countryCode] = "#ffff00";
+        codeValues[hits[i].countryCode] = "#ffff00"; //Jvectormap
         country.contentUrl = portal.pageUrl({
             id: hits[i]._id
         });
         countries.push(country);
     }
-
     // Add data to the model
     model.countries = countries;
-    model.codeValues= codeValues;
+    model.codeValues= codeValues; // Jvectormap
 	model.regionPart1 = content.page.regions.Part1;
     model.regionPart2 = content.page.regions.Part2;
 
     // Specify the view file to use
     var view = resolve('hello.html');
-
     // Compile HTML from the view with dynamic data from the model
     var body = thymeleaf.render(view, model);
-
     // Return the response object
     return {
         body: body

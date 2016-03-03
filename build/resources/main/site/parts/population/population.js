@@ -15,24 +15,20 @@ exports.get = function(req) {
         ],
         "query": "_path LIKE '/content" + nearestSite._path + "/*'"
     });
-	
-
     var hits = result.hits;
-    var countriesPopulation = 0;
+    var num = 0;
 	var numOfCountriesWithDefinedPopulation = 0;
 	  // Loop through the contents and extract the needed data
     for(var i = 0; i < hits.length; i++) {
 		if(typeof(hits[i].data.population) !== "undefined"){
-			countriesPopulation +=  parseInt(hits[i].data.population.replace(',',''));
-			numOfCountriesWithDefinedPopulation++;
+            num += parseInt(hits[i].data.population.replace(/\D/g,''));
+            numOfCountriesWithDefinedPopulation++;
 		}
     }
-	
 	var model = {
-        totalPopulation: countriesPopulation,
+        totalPopulation: num.toString(),
 		totalCountries: numOfCountriesWithDefinedPopulation
     };
-
     // Specify the view file to use
     var view = resolve('population.html');
 

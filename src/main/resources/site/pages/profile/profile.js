@@ -7,7 +7,6 @@ exports.get = function(req) {
     var model = {};
 	var content = portal.getContent();
 
-	model.topRegion = content.page.regions.top;
 	model.bodyRegion = content.page.regions.body;
     model.rightRegion = content.page.regions.right;
 
