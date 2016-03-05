@@ -24,14 +24,15 @@
         </div>
 	</div>
     <div data-portal-region="Part2"></div>
-
-    <div id="world-map">World map</div>
+    <div id="world-map"  style="width: 600px; height: 400px">World map</div>
 
 <script th:inline="javascript"> //Jvectormap
         $(function(){
             /*<![CDATA[*/
             var codeValues= /*[[${codeValues}]]*/ [];
+            var countryLink= /*[[${countryLink}]]*/ [];
             /*]]>*/
+
             var map = $('#world-map').vectorMap({
                 map: 'world_mill_en',
                 series: {
@@ -39,11 +40,14 @@
                         attribute: 'fill',
                         values: codeValues
                     }]
+                },
+                onRegionClick: function (event, codeValues) {
+                    if (typeof(countryLink[codeValues]) !== "undefined"){
+                        window.open(countryLink[codeValues]);
+                    }
                 }
             });
-
         });
-
 </script>
 </body>
 </html>

@@ -21,11 +21,11 @@ $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial
     .navbar-right {
       li {
         #search {
-          margin-top: -7%;
           margin-left: -100%;
         }
-        .fa {
+        .fa{
           margin-left: -600%;
+          margin-top: 10px;
         }
       }
     }

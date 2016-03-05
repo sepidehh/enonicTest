@@ -14,5 +14,8 @@ body {
   body #world-map {
     width: 500px;
     height: 500px; }
+  body .jvectormap-container {
+    height: 500px;
+    width: 700px; }
 
 /*# sourceMappingURL=hello.css.map */

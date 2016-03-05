@@ -9,34 +9,34 @@
 	<link data-th-href="${portal.assetUrl({'_path=/css/style.css'})}" href="../assets/css/style.css" rel="stylesheet"/>
 </head>
 <body data-portal-component-type="page">
-<div class="container-fluid">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Social Internet</a>
+	<div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Social Internet</a>
+			</div>
+			<div class="collapse navbar-collapse" id="topNavbar">
+				<ul class="nav navbar-nav left-ul">
+					<li><a href="#">Departments</a></li>
+					<li><a href="#">Grid</a></li>
+					<li><a href="#">Theme</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right hidden-xs">
+					<li><a href="#">
+						<input class="form-control" id="search" type="text" placeholder="Search..."/>
+					</a></li>
+					<li><a href="#"><i class="fa fa-at"></i> SU </a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="cover-photo">
+			<img data-th-src="${portal.assetUrl({'_path=images/header.jpg'})}"/>
 		</div>
-		<div class="collapse navbar-collapse" id="topNavbar">
-			<ul class="nav navbar-nav left-ul">
-				<li><a href="#">Departments</a></li>
-				<li><a href="#">Grid</a></li>
-				<li><a href="#">Theme</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right hidden-xs">
-				<li><a href="#">
-					<input class="form-control" id="search" type="text" placeholder="Search..."/>
-				</a></li>
-				<li><a href="#"><i class="fa fa-at"></i> SU </a></li>
-			</ul>
-		</div>
-	</nav>
-	<div class="cover-photo">
-		<img data-th-src="${portal.assetUrl({'_path=images/header.jpg'})}"/>
 	</div>
-</div>
 	<div class="row container">
 		<div class="intro">
 		<div class="profile-picture  col-md-3 col-sm-3 col-xs-6">
@@ -47,26 +47,24 @@
 		</div>
 		</div>
 	</div>
-
-
-
-<div class="container">
-	<div class="row">
-		<div class="col-md-9">
-			<div data-portal-region="body">
-				<div data-th-if="${bodyRegion}" data-th-each="component : ${bodyRegion.components}" data-th-remove="tag">
-					<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div data-portal-region="body">
+					<div data-th-if="${bodyRegion}" data-th-each="component : ${bodyRegion.components}" data-th-remove="tag">
+						<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-md-3">
-			<div data-portal-region="right">
-				<div data-th-if="${rightRegion}" data-th-each="component : ${rightRegion.components}" data-th-remove="tag">
-					<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+			<div class="col-md-3">
+				<div data-portal-region="right">
+					<div data-th-if="${rightRegion}" data-th-each="component : ${rightRegion.components}" data-th-remove="tag">
+						<div data-portal-component="${component.path}" data-th-remove="tag"></div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </body>
+
 </html>

@@ -21,20 +21,23 @@ exports.get = function(req) {
     var hits = result.hits;
     var countries = [];
 	var codeValues ={};
+    var countryLink ={};
+    
     // Loop through the contents and extract the needed data
     for(var i = 0; i < hits.length; i++) {
-
         var country = {};
         country.name = hits[i].displayName;
-        codeValues[hits[i].countryCode] = "#ffff00"; //Jvectormap
+        codeValues[hits[i].data.countryCode] = "#ffff00";
         country.contentUrl = portal.pageUrl({
             id: hits[i]._id
         });
+        countryLink[hits[i].data.countryCode]= country.contentUrl;
         countries.push(country);
     }
     // Add data to the model
     model.countries = countries;
-    model.codeValues= codeValues; // Jvectormap
+    model.codeValues = codeValues; // Jvectormap
+    model.countryLink = countryLink; // Jvectormap
 	model.regionPart1 = content.page.regions.Part1;
     model.regionPart2 = content.page.regions.Part2;
 
