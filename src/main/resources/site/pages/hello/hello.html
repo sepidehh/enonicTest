@@ -31,7 +31,7 @@
             /*<![CDATA[*/
             var codeValues= /*[[${codeValues}]]*/ [];
             var countryLink= /*[[${countryLink}]]*/ [];
-            /*]]>*/
+            var inhabitants= /*[[${inhabitants}]]*/ [];
 
             var map = $('#world-map').vectorMap({
                 map: 'world_mill_en',
@@ -45,9 +45,17 @@
                     if (typeof(countryLink[codeValues]) !== "undefined"){
                         window.open(countryLink[codeValues]);
                     }
+                },
+                onRegionTipShow: function(event, label, codeValues) {
+                    if (typeof(inhabitants[codeValues]) !== "undefined") {
+                        label.html(
+                                label.html()+ "<br/>" + "Population:" + inhabitants[codeValues]
+                        );
+                    }
                 }
             });
         });
+/*]]>*/
 </script>
 </body>
 </html>

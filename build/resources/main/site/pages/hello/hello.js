@@ -22,6 +22,7 @@ exports.get = function(req) {
     var countries = [];
 	var codeValues ={};
     var countryLink ={};
+    var inhabitants ={};
     
     // Loop through the contents and extract the needed data
     for(var i = 0; i < hits.length; i++) {
@@ -32,12 +33,14 @@ exports.get = function(req) {
             id: hits[i]._id
         });
         countryLink[hits[i].data.countryCode]= country.contentUrl;
+        inhabitants[hits[i].data.countryCode]= hits[i].data.population;
         countries.push(country);
     }
     // Add data to the model
     model.countries = countries;
     model.codeValues = codeValues; // Jvectormap
     model.countryLink = countryLink; // Jvectormap
+    model.inhabitants = inhabitants;
 	model.regionPart1 = content.page.regions.Part1;
     model.regionPart2 = content.page.regions.Part2;
 
